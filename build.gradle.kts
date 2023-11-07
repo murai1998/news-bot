@@ -16,13 +16,17 @@ java {
 
 repositories {
 	mavenCentral()
+	maven { url = uri("https://repo.spring.io/milestone") }
 }
 
 dependencies {
 	implementation("org.telegram:telegrambots-spring-boot-starter:6.1.0")
-	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.cloud:spring-cloud-starter-openfeign:3.1.7")
+	implementation("org.springframework.cloud:spring-cloud-starter:3.1.7")
+	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
